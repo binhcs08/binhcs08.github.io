@@ -46,6 +46,8 @@ def open_yml(f: str) -> object:
 def gen_menu_list(page: str) -> str:
     p = ""
     all = open_yml(f"{yml_path}/{page}.yml")
+    if all is None:
+        return p
     for d in all:
         menu_id = d.get('menu_id')
         menu_name = d.get('menu_name')
@@ -60,6 +62,8 @@ def gen_menu_list(page: str) -> str:
 def gen_nav_list(page: str) -> str:
     p = ""
     all = open_yml(f"{yml_path}/{page}.yml")
+    if all is None:
+        return p
     for d in all:
         menu_id = d.get('menu_id')
         menu_name = d.get('menu_name')
