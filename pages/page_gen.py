@@ -89,16 +89,15 @@ def gen_htmls():
     from os import listdir
     from os.path import isfile, join
     pages = list(map(lambda f: f.split('.')[0], [f for f in listdir(yml_path) if isfile(join(yml_path, f))]))
-    print(pages)
+    try:
+        if os.path.isdir(html_path):
+            shutil.rmtree(html_path)
+        os.mkdir(html_path)
+    except OSError:
+        print ("Creation of the directory %s failed" % html_path)
+    else:
+        print ("Successfully created the directory %s " % html_path)
     for page in pages:
-        try:
-            if os.path.isdir(html_path):
-                shutil.rmtree(html_path)
-            os.mkdir(html_path)
-        except OSError:
-            print ("Creation of the directory %s failed" % html_path)
-        else:
-            print ("Successfully created the directory %s " % html_path)
         with open(f"{html_path}/{page}.html", "w") as o:
             html_page = gen_html_page(yml_page=page)
             o.write(html_page)
