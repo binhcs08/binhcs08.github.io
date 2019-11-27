@@ -9,6 +9,10 @@
       price: 20000000 vnd
       description: Cordoba GK-studio là dòng guitar cao cấp blah blah ...
       image: /repo_images/cordoba_gk_studio.jpg #ảnh 
+    - name: Cordoba GK-negro
+      price: 50000000 vnd
+      description: Cordoba GK-negro là dòng guitar cao cấp blah blah ...
+      image: /repo_images/cordoba_gk_negro.jpg #ảnh 
 - menu_id: yamaha
   menu_name: Yamaha guitars
   menu_items:
