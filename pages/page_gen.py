@@ -3,7 +3,7 @@
 import yaml
 import os, shutil
 
-pages = ['classical_guitars']
+#pages = ['classical_guitars']
 
 menu_header_tmp =  '''
             <div id="{menu_id}" class="menu-category">
@@ -82,6 +82,10 @@ def gen_html_page(yml_page: str) -> str:
     return html
 
 def gen_htmls():
+    from os import listdir
+    from os.path import isfile, join
+    pages = list(map(lambda f: f.split('.')[0], [f for f in listdir(yml_path) if isfile(join(yml_path, f))]))
+    print(pages)
     for page in pages:
         try:
             if os.path.isdir(html_path):
