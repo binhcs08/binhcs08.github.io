@@ -1,0 +1,25 @@
+- menu_id: cordoba #
+  menu_name: Cordoba guitars #Tên hãng
+  menu_items:
+    - name: Cordoba CE-5 #Tên sản phẩm
+      price: 10000000 vnd #giá
+      description: Cordoba CE-5 là dòng guitar cơ bản của Cordoba blah blah...  #mô tả sản phẩm
+      image: /repo_images/cordoba_ce5.jpg #ảnh
+    - name: Cordoba GK-studio
+      price: 20000000 vnd
+      description: Cordoba GK-studio là dòng guitar cao cấp blah blah ...
+      image: /repo_images/cordoba_gk_studio.jpg #ảnh 
+- menu_id: yamaha
+  menu_name: Yamaha guitars
+  menu_items:
+    - name: Yamaha GC82 #Tên sản phẩm
+      price: 200000000 vnd #giá
+      description: Yamaha GC82 dòng guitar cao cấp của Yamaha blah blah...  #mô tả sản phẩm
+      image: /repo_images/yamaha_gc82.jpg #ảnh
+    - name: Taylor GC12C
+      price: 40000000 vnd
+      description: Yamaha GC12C là dòng guitar cao cấp blah blah ...
+      image: /repo_images/yamaha_gc12c.jpg #ảnh 
+
+
+
